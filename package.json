@@ -5,8 +5,10 @@
   "scripts": {
     "start": "node app.js"
   },
+  "main": "app.js",
   "dependencies": {
     "body-parser": "^1.15.1",
+    "config-chain": "^1.1.10",
     "express": "^4.13.4",
     "jade": "^1.11.0",
     "jsonfile": "^2.3.1",
