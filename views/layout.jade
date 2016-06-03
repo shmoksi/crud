@@ -1,0 +1,31 @@
+//- doctype html
+//- html
+//-   head
+//-     title= title
+//-     link(rel='stylesheet', href='/stylesheets/style.css')
+//-   body
+//-     block content
+
+doctype html
+html
+	head
+		title= title
+		link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
+		link(rel='stylesheet', href='/stylesheets/main.css')
+
+	body
+		.container-fluid
+			nav.navbar.navbar-default
+				.container
+					.navbar-header
+						span.navbar-brand Company Name
+		#main.container
+			.row
+				.container
+					.col-md-12(role='main')
+					block content
+		footer.footer
+			.container
+				p.text-muted © Copyright - 2016
+		script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js')
+		script(src='/javascripts/scripts.js')

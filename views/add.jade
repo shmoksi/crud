@@ -1,0 +1,20 @@
+extends layout
+
+block content
+  h2 Create User
+  .jumbotron.align-left
+    form.form-horizontal.css-form(novalidate='', role='form', id='formAdd')
+      .form-group
+        label.col-lg-4.control-label User name:
+        .col-lg-8
+          input.form-control(type='text', placeholder='Enter some name', name='username')
+      .form-group
+        label.col-lg-4.control-label Age:
+        .col-lg-8
+          input.form-control(type='text', placeholder='Enter some age', name='age')
+      .form-group
+        .col-md-4
+        .col-md-8
+          .pull-right
+            a.btn.btn-default(href='/') Back
+          input.btn.btn-primary.pull-left(type='submit', value='Save', id='addUser')

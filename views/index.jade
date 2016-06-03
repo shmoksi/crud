@@ -1,0 +1,39 @@
+extends layout
+
+//- block content
+//-   h1= title
+//-   p Welcome to #{title}
+
+//-   ul
+//-   each val in users
+//-     li= val.id + ' - ' + val.name + ' - ' + val.age
+
+block content
+	.panel.panel-default
+		.panel-heading
+			.container
+				.row
+					.span8.pull-left
+						h4 Users list
+					.span4.pull-right
+						a.btn.btn-primary(href='/add')
+							i.fa.fa-plus
+							|  New User
+		table#example.table.table-striped.table-bordered(cellspacing='0', width='100%')
+			thead
+				tr
+					th Id
+					th Name
+					th Age
+					th
+					th
+			tbody
+				each val in users
+					tr
+						td=val._id
+						td=val.username
+						td=val.age
+						td
+							a(href='/edit/'+val._id) edit
+						td
+							span(data-id=val._id, class="userDelete") remove
